@@ -77,7 +77,7 @@ class _LogicLoaderState extends State<LogicLoader> {
     try {
       await Future.wait(futures);
     } finally {
-      if (widget.builder != null) {
+      if (widget.builder != null && mounted) {
         setState(() {
           loading = false;
         });
